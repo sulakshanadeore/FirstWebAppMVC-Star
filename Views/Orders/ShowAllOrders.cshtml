@@ -1,0 +1,26 @@
+﻿<table class="table table-bordered">
+    <thead>
+
+    <th>OrderID</th>
+    <th>OrderDate</th>
+    <th>CustomerID</th>
+    <th>EmployeeID</th>
+
+    </thead>
+    <tbody>
+
+@foreach (var item in (List<OrdersModel>)ViewData["ordersData"])
+{
+            <tr>
+                <td>@item.OrderID</td>
+                <td>@item.OrderDate</td>
+                <td>@item.CustomerID</td>
+                <td>@item.EmpID</td>
+                <td>@Html.ActionLink("Edit", "EditOrder")</td>
+                <td>@Html.ActionLink("Delete", "DeleteOrder")</td>
+            </tr>
+
+}
+    </tbody>
+</table>
+    
