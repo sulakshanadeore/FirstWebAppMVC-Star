@@ -27,7 +27,7 @@ internal class Program
 
         app.MapControllerRoute(
             name: "default",
-            pattern: "{controller=Orders}/{action=ShowAllOrders}/{id?}");
+            pattern: "{controller=Employee}/{action=Details}/{id?}");
 
         app.Run();
     }
